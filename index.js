@@ -87,7 +87,7 @@ server.put("/users/:id", (req, res) => {
             res.status(200).json({message: "User updated", item})
         })
         .catch(err => {
-            console.log("", err)
+            console.log("The user with the specified ID does not exist.", err)
             res.status(404).json({message: "The user with the specified ID does not exist."})
         })
 });
